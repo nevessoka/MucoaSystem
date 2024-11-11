@@ -1,3 +1,6 @@
+using MucoaSystem.data;
+using MucoaSystem.model;
+
 namespace MucoaSystem
 {
     public partial class Form1 : Form
@@ -22,15 +25,34 @@ namespace MucoaSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text =="" || tbpwd.Text == "")
+            if (textBox1.Text == "" || tbpwd.Text == "")
             {
                 MessageBox.Show(" Preencha os campos", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                User novo = new User
+                {
+                    Name = tbpwd.Text,
+                    Password = tbpwd.Text,
+                };
+                UserRepository userRepository = new UserRepository();
+                userRepository.Read(novo);
 
             }
         }
-        
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Empty;
+            tbpwd.Text = string.Empty;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Fmr_Register register = new Fmr_Register();
+            register.Show();
+            this.Hide();
+        }
     }
 }

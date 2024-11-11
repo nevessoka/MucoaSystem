@@ -42,6 +42,7 @@
             tbpwd = new TextBox();
             button1 = new Button();
             showpwd = new CheckBox();
+            btnClear = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -91,8 +92,9 @@
             button2.Name = "button2";
             button2.Size = new Size(312, 36);
             button2.TabIndex = 1;
-            button2.Text = "SIGNUP";
+            button2.Text = "Sign Up";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label4
             // 
@@ -122,9 +124,9 @@
             label1.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(509, 91);
             label1.Name = "label1";
-            label1.Size = new Size(194, 26);
+            label1.Size = new Size(163, 26);
             label1.TabIndex = 2;
-            label1.Text = "Register Account";
+            label1.Text = "Login Account";
             // 
             // label2
             // 
@@ -175,20 +177,34 @@
             button1.Name = "button1";
             button1.Size = new Size(153, 46);
             button1.TabIndex = 7;
-            button1.Text = "LOGIN";
+            button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // showpwd
             // 
             showpwd.AutoSize = true;
-            showpwd.Location = new Point(622, 404);
+            showpwd.Location = new Point(621, 405);
             showpwd.Name = "showpwd";
             showpwd.Size = new Size(162, 29);
             showpwd.TabIndex = 8;
             showpwd.Text = "Show Password";
             showpwd.UseVisualStyleBackColor = true;
             showpwd.CheckedChanged += showpwd_CheckedChanged;
+            // 
+            // btnClear
+            // 
+            btnClear.BackColor = Color.FromArgb(254, 91, 74);
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClear.ForeColor = SystemColors.Control;
+            btnClear.Location = new Point(631, 465);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(153, 46);
+            btnClear.TabIndex = 9;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // Form1
             // 
@@ -197,6 +213,7 @@
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(835, 606);
             ControlBox = false;
+            Controls.Add(btnClear);
             Controls.Add(showpwd);
             Controls.Add(button1);
             Controls.Add(tbpwd);
@@ -210,6 +227,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -233,5 +251,6 @@
         private TextBox tbpwd;
         private Button button1;
         private CheckBox showpwd;
+        private Button btnClear;
     }
 }
