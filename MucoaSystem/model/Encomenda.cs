@@ -15,9 +15,9 @@ namespace MucoaSystem.model
         public string EnderecoEntrega { get; set; }
         public DateTime DataEncomenda { get; set; }
         public DateTime? DataEntrega { get; set; }
-        public decimal ValorTotal { get; private set; }
+        public decimal ValorTotal { get;  set; }
         public decimal ValorPago { get; set; } // Valor que o cliente efetivamente pagou
-        public int Quantidade { get; private set; } // Quantidade total de itens na encomenda
+        public int Quantidade { get;  set; } // Quantidade total de itens na encomenda
         public string Status { get; set; }
     }
 }

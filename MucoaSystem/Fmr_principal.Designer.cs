@@ -37,17 +37,17 @@ namespace MucoaSystem
             btnAddEncomenda = new Button();
             btnRemover = new Button();
             btnAlterar = new Button();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            comboBox2 = new ComboBox();
-            textBox5 = new TextBox();
-            quantidade = new DomainUpDown();
-            comboBox1 = new ComboBox();
-            dateTimePicker3 = new DateTimePicker();
+            txbValorPago = new TextBox();
+            txbValorTotal = new TextBox();
+            cbxEstado = new ComboBox();
+            txtLocal = new TextBox();
+            upDownQuant = new DomainUpDown();
+            cbxMenu = new ComboBox();
+            dtEntrega = new DateTimePicker();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtEncom = new DateTimePicker();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -56,25 +56,19 @@ namespace MucoaSystem
             groupBox1 = new GroupBox();
             btnClearCliente = new Button();
             btnAdicionarCliente = new Button();
-            dateTimePicker1 = new DateTimePicker();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            dtNasc = new DateTimePicker();
+            txtEmail = new TextBox();
+            txtMorada = new TextBox();
+            txtContato = new TextBox();
+            txtNome = new TextBox();
             label1 = new Label();
             lbDataNasc = new Label();
             label2 = new Label();
             lbEmail = new Label();
             lbContato = new Label();
             tabelaPanel = new Panel();
-            button2 = new Button();
             dataGridView1 = new DataGridView();
-            Select = new DataGridViewCheckBoxColumn();
-            DataEntrega = new DataGridViewTextBoxColumn();
-            menu = new DataGridViewTextBoxColumn();
-            quant = new DataGridViewTextBoxColumn();
-            valorEncomenda = new DataGridViewTextBoxColumn();
-            estadoEnc = new DataGridViewTextBoxColumn();
+            button2 = new Button();
             button1 = new Button();
             LogPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -88,28 +82,31 @@ namespace MucoaSystem
             // LogPanel
             // 
             LogPanel.Controls.Add(dataGridView2);
-            LogPanel.Location = new Point(12, 664);
+            LogPanel.Location = new Point(8, 484);
+            LogPanel.Margin = new Padding(2);
             LogPanel.Name = "LogPanel";
-            LogPanel.Size = new Size(1624, 159);
+            LogPanel.Size = new Size(1258, 129);
             LogPanel.TabIndex = 0;
             // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(3, 3);
+            dataGridView2.Location = new Point(3, 2);
+            dataGridView2.Margin = new Padding(2);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(1622, 153);
+            dataGridView2.Size = new Size(1255, 125);
             dataGridView2.TabIndex = 0;
             // 
             // EnncoPanel
             // 
             EnncoPanel.Controls.Add(groupBox2);
             EnncoPanel.Controls.Add(groupBox1);
-            EnncoPanel.Location = new Point(12, 36);
+            EnncoPanel.Location = new Point(8, 27);
+            EnncoPanel.Margin = new Padding(2);
             EnncoPanel.Name = "EnncoPanel";
-            EnncoPanel.Size = new Size(556, 609);
+            EnncoPanel.Size = new Size(403, 451);
             EnncoPanel.TabIndex = 1;
             // 
             // groupBox2
@@ -117,188 +114,214 @@ namespace MucoaSystem
             groupBox2.Controls.Add(btnAddEncomenda);
             groupBox2.Controls.Add(btnRemover);
             groupBox2.Controls.Add(btnAlterar);
-            groupBox2.Controls.Add(textBox7);
-            groupBox2.Controls.Add(textBox6);
-            groupBox2.Controls.Add(comboBox2);
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(quantidade);
-            groupBox2.Controls.Add(comboBox1);
-            groupBox2.Controls.Add(dateTimePicker3);
+            groupBox2.Controls.Add(txbValorPago);
+            groupBox2.Controls.Add(txbValorTotal);
+            groupBox2.Controls.Add(cbxEstado);
+            groupBox2.Controls.Add(txtLocal);
+            groupBox2.Controls.Add(upDownQuant);
+            groupBox2.Controls.Add(cbxMenu);
+            groupBox2.Controls.Add(dtEntrega);
             groupBox2.Controls.Add(label10);
             groupBox2.Controls.Add(label9);
             groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(dateTimePicker2);
+            groupBox2.Controls.Add(dtEncom);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label7);
             groupBox2.Font = new Font("Calibri", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(10, 267);
+            groupBox2.Location = new Point(16, 207);
+            groupBox2.Margin = new Padding(2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(527, 339);
+            groupBox2.Padding = new Padding(2);
+            groupBox2.Size = new Size(368, 242);
             groupBox2.TabIndex = 10;
             groupBox2.TabStop = false;
             groupBox2.Text = "Dados Encomenda";
             // 
             // btnAddEncomenda
             // 
-            btnAddEncomenda.Location = new Point(168, 286);
+            btnAddEncomenda.BackColor = Color.Transparent;
+            btnAddEncomenda.ForeColor = SystemColors.ActiveCaptionText;
+            btnAddEncomenda.Location = new Point(119, 190);
+            btnAddEncomenda.Margin = new Padding(2);
             btnAddEncomenda.Name = "btnAddEncomenda";
-            btnAddEncomenda.Size = new Size(95, 37);
+            btnAddEncomenda.Size = new Size(73, 38);
             btnAddEncomenda.TabIndex = 21;
             btnAddEncomenda.Text = "Adicionar";
-            btnAddEncomenda.UseVisualStyleBackColor = true;
+            btnAddEncomenda.UseVisualStyleBackColor = false;
+            btnAddEncomenda.Click += btnAddEncomenda_Click;
             // 
             // btnRemover
             // 
-            btnRemover.Location = new Point(389, 286);
+            btnRemover.Location = new Point(272, 190);
+            btnRemover.Margin = new Padding(2);
             btnRemover.Name = "btnRemover";
-            btnRemover.Size = new Size(95, 37);
+            btnRemover.Size = new Size(68, 38);
             btnRemover.TabIndex = 20;
             btnRemover.Text = "Remover";
             btnRemover.UseVisualStyleBackColor = true;
             // 
             // btnAlterar
             // 
-            btnAlterar.Location = new Point(280, 286);
+            btnAlterar.Location = new Point(196, 190);
+            btnAlterar.Margin = new Padding(2);
             btnAlterar.Name = "btnAlterar";
-            btnAlterar.Size = new Size(95, 37);
+            btnAlterar.Size = new Size(66, 38);
             btnAlterar.TabIndex = 19;
             btnAlterar.Text = "Alterar";
             btnAlterar.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txbValorPago
             // 
-            textBox7.Location = new Point(133, 188);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(101, 32);
-            textBox7.TabIndex = 18;
+            txbValorPago.Location = new Point(93, 127);
+            txbValorPago.Margin = new Padding(2);
+            txbValorPago.Name = "txbValorPago";
+            txbValorPago.Size = new Size(72, 24);
+            txbValorPago.TabIndex = 18;
             // 
-            // textBox6
+            // txbValorTotal
             // 
-            textBox6.Location = new Point(386, 92);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(98, 32);
-            textBox6.TabIndex = 17;
+            txbValorTotal.Location = new Point(270, 69);
+            txbValorTotal.Margin = new Padding(2);
+            txbValorTotal.Name = "txbValorTotal";
+            txbValorTotal.Size = new Size(70, 24);
+            txbValorTotal.TabIndex = 17;
             // 
-            // comboBox2
+            // cbxEstado
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(344, 185);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(140, 32);
-            comboBox2.TabIndex = 16;
+            cbxEstado.FormattingEnabled = true;
+            cbxEstado.Items.AddRange(new object[] { "Pendente", "Entregue", "Pago 50%" });
+            cbxEstado.Location = new Point(241, 125);
+            cbxEstado.Margin = new Padding(2);
+            cbxEstado.Name = "cbxEstado";
+            cbxEstado.Size = new Size(99, 23);
+            cbxEstado.TabIndex = 16;
             // 
-            // textBox5
+            // txtLocal
             // 
-            textBox5.Location = new Point(240, 140);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(244, 32);
-            textBox5.TabIndex = 12;
+            txtLocal.Location = new Point(168, 98);
+            txtLocal.Margin = new Padding(2);
+            txtLocal.Name = "txtLocal";
+            txtLocal.Size = new Size(172, 24);
+            txtLocal.TabIndex = 12;
             // 
-            // quantidade
+            // upDownQuant
             // 
-            quantidade.Location = new Point(401, 46);
-            quantidade.Name = "quantidade";
-            quantidade.Size = new Size(83, 32);
-            quantidade.Sorted = true;
-            quantidade.TabIndex = 15;
-            quantidade.Text = "1";
+            upDownQuant.Location = new Point(281, 42);
+            upDownQuant.Margin = new Padding(2);
+            upDownQuant.Name = "upDownQuant";
+            upDownQuant.Size = new Size(58, 24);
+            upDownQuant.Sorted = true;
+            upDownQuant.TabIndex = 15;
+            upDownQuant.Text = "1";
             // 
-            // comboBox1
+            // cbxMenu
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(92, 44);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(175, 32);
-            comboBox1.TabIndex = 14;
+            cbxMenu.FormattingEnabled = true;
+            cbxMenu.Items.AddRange(new object[] { "Menu 1", "Menu 2", "Menu 3" });
+            cbxMenu.Location = new Point(64, 40);
+            cbxMenu.Margin = new Padding(2);
+            cbxMenu.Name = "cbxMenu";
+            cbxMenu.Size = new Size(124, 23);
+            cbxMenu.TabIndex = 14;
             // 
-            // dateTimePicker3
+            // dtEntrega
             // 
-            dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(302, 236);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(182, 32);
-            dateTimePicker3.TabIndex = 13;
+            dtEntrega.Format = DateTimePickerFormat.Short;
+            dtEntrega.Location = new Point(211, 156);
+            dtEntrega.Margin = new Padding(2);
+            dtEntrega.Name = "dtEntrega";
+            dtEntrega.Size = new Size(129, 24);
+            dtEntrega.TabIndex = 13;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(26, 188);
+            label10.Location = new Point(18, 127);
+            label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
-            label10.Size = new Size(103, 24);
+            label10.Size = new Size(72, 17);
             label10.TabIndex = 12;
             label10.Text = "Valor Pago:";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(256, 188);
+            label9.Location = new Point(179, 130);
+            label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(77, 24);
+            label9.Size = new Size(53, 17);
             label9.TabIndex = 11;
             label9.Text = "Estado :";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(283, 96);
+            label8.Location = new Point(198, 72);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(104, 24);
+            label8.Size = new Size(72, 17);
             label8.TabIndex = 10;
             label8.Text = "Valor Total:";
             // 
-            // dateTimePicker2
+            // dtEncom
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(142, 94);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(125, 32);
-            dateTimePicker2.TabIndex = 9;
+            dtEncom.Format = DateTimePickerFormat.Short;
+            dtEncom.Location = new Point(99, 70);
+            dtEncom.Margin = new Padding(2);
+            dtEncom.Name = "dtEncom";
+            dtEncom.Size = new Size(89, 24);
+            dtEncom.TabIndex = 9;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(25, 52);
+            label3.Location = new Point(18, 45);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(64, 24);
+            label3.Size = new Size(45, 17);
             label3.TabIndex = 0;
             label3.Text = "Menu:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(26, 140);
+            label4.Location = new Point(18, 98);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(152, 24);
+            label4.Size = new Size(106, 17);
             label4.TabIndex = 4;
             label4.Text = "Local da Entrega:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(280, 52);
+            label5.Location = new Point(196, 45);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(113, 24);
+            label5.Size = new Size(78, 17);
             label5.TabIndex = 1;
             label5.Text = "Quantidade:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(29, 242);
+            label6.Location = new Point(20, 159);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(149, 24);
+            label6.Size = new Size(105, 17);
             label6.TabIndex = 3;
             label6.Text = "Data da Entrega:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(26, 99);
+            label7.Location = new Point(18, 73);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(114, 24);
+            label7.Size = new Size(80, 17);
             label7.TabIndex = 2;
             label7.Text = "Data da Enc:";
             // 
@@ -306,29 +329,32 @@ namespace MucoaSystem
             // 
             groupBox1.Controls.Add(btnClearCliente);
             groupBox1.Controls.Add(btnAdicionarCliente);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(dtNasc);
+            groupBox1.Controls.Add(txtEmail);
+            groupBox1.Controls.Add(txtMorada);
+            groupBox1.Controls.Add(txtContato);
+            groupBox1.Controls.Add(txtNome);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(lbDataNasc);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(lbEmail);
             groupBox1.Controls.Add(lbContato);
             groupBox1.Font = new Font("Calibri", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(10, 25);
+            groupBox1.Location = new Point(16, 8);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(527, 231);
+            groupBox1.Padding = new Padding(2);
+            groupBox1.Size = new Size(368, 188);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados Cliente";
             // 
             // btnClearCliente
             // 
-            btnClearCliente.Location = new Point(388, 180);
+            btnClearCliente.Location = new Point(273, 142);
+            btnClearCliente.Margin = new Padding(2);
             btnClearCliente.Name = "btnClearCliente";
-            btnClearCliente.Size = new Size(96, 37);
+            btnClearCliente.Size = new Size(67, 38);
             btnClearCliente.TabIndex = 11;
             btnClearCliente.Text = "Clear";
             btnClearCliente.UseVisualStyleBackColor = true;
@@ -336,55 +362,63 @@ namespace MucoaSystem
             // 
             // btnAdicionarCliente
             // 
-            btnAdicionarCliente.Location = new Point(266, 181);
+            btnAdicionarCliente.Location = new Point(183, 142);
+            btnAdicionarCliente.Margin = new Padding(2);
             btnAdicionarCliente.Name = "btnAdicionarCliente";
-            btnAdicionarCliente.Size = new Size(105, 37);
+            btnAdicionarCliente.Size = new Size(79, 38);
             btnAdicionarCliente.TabIndex = 10;
             btnAdicionarCliente.Text = "Adicionar";
             btnAdicionarCliente.UseVisualStyleBackColor = true;
+            btnAdicionarCliente.Click += btnAdicionarCliente_Click;
             // 
-            // dateTimePicker1
+            // dtNasc
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(359, 100);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(125, 32);
-            dateTimePicker1.TabIndex = 9;
+            dtNasc.Format = DateTimePickerFormat.Short;
+            dtNasc.Location = new Point(251, 75);
+            dtNasc.Margin = new Padding(2);
+            dtNasc.Name = "dtNasc";
+            dtNasc.Size = new Size(89, 24);
+            dtNasc.TabIndex = 9;
             // 
-            // textBox4
+            // txtEmail
             // 
-            textBox4.Location = new Point(127, 135);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(357, 32);
-            textBox4.TabIndex = 8;
+            txtEmail.Location = new Point(82, 107);
+            txtEmail.Margin = new Padding(2);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(257, 24);
+            txtEmail.TabIndex = 8;
             // 
-            // textBox3
+            // txtMorada
             // 
-            textBox3.Location = new Point(127, 65);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(357, 32);
-            textBox3.TabIndex = 7;
+            txtMorada.Location = new Point(82, 44);
+            txtMorada.Margin = new Padding(2);
+            txtMorada.Name = "txtMorada";
+            txtMorada.Size = new Size(258, 24);
+            txtMorada.TabIndex = 7;
             // 
-            // textBox2
+            // txtContato
             // 
-            textBox2.Location = new Point(127, 100);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(136, 32);
-            textBox2.TabIndex = 6;
+            txtContato.Location = new Point(82, 75);
+            txtContato.Margin = new Padding(2);
+            txtContato.Name = "txtContato";
+            txtContato.Size = new Size(96, 24);
+            txtContato.TabIndex = 6;
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Location = new Point(127, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(357, 32);
-            textBox1.TabIndex = 5;
+            txtNome.Location = new Point(82, 17);
+            txtNome.Margin = new Padding(2);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(258, 24);
+            txtNome.TabIndex = 5;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 31);
+            label1.Location = new Point(20, 19);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(65, 24);
+            label1.Size = new Size(46, 17);
             label1.TabIndex = 0;
             label1.Text = "Nome:";
             label1.Click += label1_Click;
@@ -392,9 +426,10 @@ namespace MucoaSystem
             // lbDataNasc
             // 
             lbDataNasc.AutoSize = true;
-            lbDataNasc.Location = new Point(261, 104);
+            lbDataNasc.Location = new Point(182, 77);
+            lbDataNasc.Margin = new Padding(2, 0, 2, 0);
             lbDataNasc.Name = "lbDataNasc";
-            lbDataNasc.Size = new Size(98, 24);
+            lbDataNasc.Size = new Size(70, 17);
             lbDataNasc.TabIndex = 4;
             lbDataNasc.Text = "Data Nasc:";
             lbDataNasc.Click += lbDataNasc_Click;
@@ -402,119 +437,89 @@ namespace MucoaSystem
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 67);
+            label2.Location = new Point(20, 45);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(81, 24);
+            label2.Size = new Size(57, 17);
             label2.TabIndex = 1;
             label2.Text = "Morada:";
             // 
             // lbEmail
             // 
             lbEmail.AutoSize = true;
-            lbEmail.Location = new Point(28, 135);
+            lbEmail.Location = new Point(20, 107);
+            lbEmail.Margin = new Padding(2, 0, 2, 0);
             lbEmail.Name = "lbEmail";
-            lbEmail.Size = new Size(61, 24);
+            lbEmail.Size = new Size(43, 17);
             lbEmail.TabIndex = 3;
             lbEmail.Text = "Email:";
             // 
             // lbContato
             // 
             lbContato.AutoSize = true;
-            lbContato.Location = new Point(28, 103);
+            lbContato.Location = new Point(20, 77);
+            lbContato.Margin = new Padding(2, 0, 2, 0);
             lbContato.Name = "lbContato";
-            lbContato.Size = new Size(91, 24);
+            lbContato.Size = new Size(63, 17);
             lbContato.TabIndex = 2;
             lbContato.Text = "Contacto:";
             // 
             // tabelaPanel
             // 
-            tabelaPanel.Controls.Add(button2);
             tabelaPanel.Controls.Add(dataGridView1);
-            tabelaPanel.Controls.Add(button1);
             tabelaPanel.Font = new Font("Calibri", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            tabelaPanel.Location = new Point(586, 12);
+            tabelaPanel.Location = new Point(430, 7);
+            tabelaPanel.Margin = new Padding(2);
             tabelaPanel.Name = "tabelaPanel";
-            tabelaPanel.Size = new Size(1050, 633);
+            tabelaPanel.Size = new Size(836, 473);
             tabelaPanel.TabIndex = 2;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(836, 10);
-            button2.Name = "button2";
-            button2.Size = new Size(204, 37);
-            button2.TabIndex = 2;
-            button2.Text = "Enviar E-mail";
-            button2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.Menu;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Select, DataEntrega, menu, quant, valorEncomenda, estadoEnc });
-            dataGridView1.GridColor = SystemColors.InactiveCaption;
-            dataGridView1.Location = new Point(0, 61);
+            dataGridView1.GridColor = SystemColors.Window;
+            dataGridView1.Location = new Point(2, 35);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1047, 569);
+            dataGridView1.Size = new Size(832, 436);
             dataGridView1.StandardTab = true;
-            dataGridView1.TabIndex = 0;
+            dataGridView1.TabIndex = 1;
             // 
-            // Select
+            // button2
             // 
-            Select.HeaderText = "Select";
-            Select.MinimumWidth = 8;
-            Select.Name = "Select";
-            // 
-            // DataEntrega
-            // 
-            DataEntrega.HeaderText = "Data Entrega";
-            DataEntrega.MinimumWidth = 8;
-            DataEntrega.Name = "DataEntrega";
-            DataEntrega.Resizable = DataGridViewTriState.True;
-            DataEntrega.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // menu
-            // 
-            menu.HeaderText = "Menu";
-            menu.MinimumWidth = 8;
-            menu.Name = "menu";
-            // 
-            // quant
-            // 
-            quant.HeaderText = "Quantidade";
-            quant.MinimumWidth = 8;
-            quant.Name = "quant";
-            // 
-            // valorEncomenda
-            // 
-            valorEncomenda.HeaderText = "Total";
-            valorEncomenda.MinimumWidth = 8;
-            valorEncomenda.Name = "valorEncomenda";
-            // 
-            // estadoEnc
-            // 
-            estadoEnc.HeaderText = "Estado";
-            estadoEnc.MinimumWidth = 8;
-            estadoEnc.Name = "estadoEnc";
+            button2.Location = new Point(1123, 628);
+            button2.Margin = new Padding(2);
+            button2.Name = "button2";
+            button2.Size = new Size(143, 39);
+            button2.TabIndex = 2;
+            button2.Text = "Enviar E-mail";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            button1.Location = new Point(587, 10);
+            button1.Location = new Point(945, 628);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(215, 37);
+            button1.Size = new Size(150, 39);
             button1.TabIndex = 1;
             button1.Text = "Enviar SMS";
             button1.UseVisualStyleBackColor = true;
             // 
             // Fmr_principal
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1669, 835);
+            ClientSize = new Size(1288, 678);
+            Controls.Add(button2);
             Controls.Add(tabelaPanel);
             Controls.Add(EnncoPanel);
+            Controls.Add(button1);
             Controls.Add(LogPanel);
+            Margin = new Padding(2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Fmr_principal";
@@ -545,16 +550,16 @@ namespace MucoaSystem
         private Label label2;
         private Label label1;
         private GroupBox groupBox1;
-        private DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private DateTimePicker dtNasc;
+        private System.Windows.Forms.TextBox txtEmail;
+        private TextBox txtMorada;
+        private TextBox txtContato;
+        private TextBox txtNome;
         private Label lbDataNasc;
         private Label lbEmail;
         private Label lbContato;
         private GroupBox groupBox2;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtEncom;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -562,24 +567,18 @@ namespace MucoaSystem
         private Label label7;
         private Button btnClearCliente;
         private Button btnAdicionarCliente;
-        private ComboBox comboBox1;
-        private DateTimePicker dateTimePicker3;
+        private ComboBox cbxMenu;
+        private DateTimePicker dtEntrega;
         private Label label10;
         private Label label9;
         private Label label8;
-        private DomainUpDown quantidade;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private ComboBox comboBox2;
-        private TextBox textBox5;
+        private DomainUpDown upDownQuant;
+        private TextBox txbValorPago;
+        private TextBox txbValorTotal;
+        private ComboBox cbxEstado;
+        private TextBox txtLocal;
         private Button btnAddEncomenda;
         private Button btnRemover;
         private Button btnAlterar;
-        private DataGridViewCheckBoxColumn Select;
-        private DataGridViewTextBoxColumn DataEntrega;
-        private DataGridViewTextBoxColumn menu;
-        private DataGridViewTextBoxColumn quant;
-        private DataGridViewTextBoxColumn valorEncomenda;
-        private DataGridViewTextBoxColumn estadoEnc;
     }
 }
