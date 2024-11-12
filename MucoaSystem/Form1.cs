@@ -36,8 +36,12 @@ namespace MucoaSystem
                     Name = tbpwd.Text,
                     Password = tbpwd.Text,
                 };
-                UserRepository userRepository = new UserRepository();
-                userRepository.Read(novo);
+                //UserRepository userRepository = new UserRepository();
+                //userRepository.Read(novo);
+
+                Fmr_principal main = new Fmr_principal();
+                main.Show();
+                this.Hide();
 
             }
         }
